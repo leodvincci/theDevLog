@@ -1,2 +1,2 @@
 # theDevLog
-![image](https://user-images.githubusercontent.com/90817505/212577505-70c64f56-aaae-4dd0-83cd-a1dc6a5d7505.png)
+![image](https://user-images.githubusercontent.com/90817505/212580657-aa63bbd6-c71d-41b7-85f3-2bae6bf2de24.png)
