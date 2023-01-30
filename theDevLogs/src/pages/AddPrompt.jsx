@@ -6,7 +6,12 @@ import Prompt from "../components/Prompt.jsx";
 function AddPrompt() {
 
     return (
-        <Prompt text={"Enter a New Prompt Title:"}/>
+        <>
+
+        <h1 style={{fontSize:"3rem",marginTop:"1rem",marginBottom:"2rem",color:"white"}}>Create a New Prompt</h1>
+        <Prompt text={"Prompt Title"}/>
+        </>
+
     )
 }
 

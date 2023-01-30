@@ -6,6 +6,8 @@ export default function Home(){
             <Prompt text={"What would you write if this wasn't a placeholder?"}/>
             <Prompt text={"What about now?"}/>
             <Prompt text={"Anything new right about now?"}/>
+   
+
         </>
     )
 }
