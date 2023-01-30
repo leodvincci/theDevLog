@@ -6,6 +6,14 @@
   height: 100vh;
 }
 
+a:link{
+  text-decoration: none;
+}
+
+a:visited{
+  color: inherit;
+}
+
 *{
   margin: 0;
 }
@@ -36,6 +44,16 @@
   border-radius: .5rem;
   background: #307c51;
   margin-top: 2.5rem;
+}
+
+.my-btn:hover{
+  color: #131313;
+  cursor: pointer;
+}
+
+.my-btn:active{
+  color: #181616;
+  background: #286944;
 }
 
 .prompt-comp{
@@ -82,7 +100,7 @@
 }
 
 input{
-  color: #2f57a6;
+  color: #565656;
   font-size: 1.5rem;
   padding-left: 30px;
 }

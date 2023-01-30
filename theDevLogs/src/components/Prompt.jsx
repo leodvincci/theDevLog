@@ -9,7 +9,8 @@ export default function Prompt(props){
                 <input className={"prompt-input"} type="text"/>
             </span>
 
-            <ButtonAdd text={'Submit'}/>
+            <ButtonAdd text={'Submit'} color={}/>
+            <ButtonAdd text={'Remove'} color={"crimson"}/>
 
         </div>
 
