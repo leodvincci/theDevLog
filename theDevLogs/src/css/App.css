@@ -1,0 +1,35 @@
+.App{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  background: #131313;
+  height: 100vh;
+}
+
+*{
+  margin: 0;
+}
+
+.the-header{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.my-nav{
+  font-size: 1.5rem;
+  width: 100vw;
+  height: 10%;
+  align-items: center;
+  /*border: 1px solid crimson;*/
+  display: flex;
+  justify-content: space-evenly;
+  color: #dadada;
+}
+
+.logo{
+  width: 35%;
+  margin-bottom: 2rem;
+  margin-top: 5rem;
+  /*border: 1px solid crimson;*/
+}
