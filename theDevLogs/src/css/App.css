@@ -25,6 +25,17 @@ a:visited{
   flex-direction: column;
 }
 
+.home-ish{
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*border: 1px solid crimson;*/
+  width: 90%;
+  height: 50%;
+}
+
 .my-nav{
   font-size: 1.5rem;
   width: 100vw;
@@ -62,7 +73,6 @@ a:visited{
   justify-content: center;
   margin-bottom: 3rem;
   width: 85%;
-  height: 15%;
   /*border: 1px solid crimson;*/
 }
 
@@ -95,13 +105,13 @@ a:visited{
 
 .prompt-input{
   width: 95%;
-  height: 40%;
   border-radius: .8rem;
   border: none;
 }
 
 input{
   color: #565656;
+  height: 3rem;
   font-size: 1.5rem;
   padding-left: 30px;
 }
