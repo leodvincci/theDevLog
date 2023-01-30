@@ -1,15 +1,12 @@
 import '../css/App.css'
 import Header from "../components/Header.jsx";
 import ButtonAdd from "../components/ButtonAdd.jsx";
+import Prompt from "../components/Prompt.jsx";
 
 function AddPrompt() {
 
     return (
-        <div style={{marginTop:"8rem"}}>
-                <input type="text"/>
-                <ButtonAdd text={"Add Prompt"}/>
-
-        </div>
+        <Prompt text={"Enter a New Prompt Title:"}/>
     )
 }
 

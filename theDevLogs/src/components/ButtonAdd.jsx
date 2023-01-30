@@ -1,7 +1,7 @@
 export default function ButtonAdd(props){
     return (
 
-        <button> {props.text}</button>
+        <button className={"my-btn"}> {props.text}</button>
 
     )
 

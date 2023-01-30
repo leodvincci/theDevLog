@@ -1,6 +1,7 @@
 import "../css/App.css"
 import {BrowserRouter, Route, Routes, Link, NavLink} from "react-router-dom";
 import AddPrompt from "../pages/AddPrompt.jsx";
+import Home from "../pages/Home.jsx";
 
 export default function Nav(props){
     return (
@@ -15,7 +16,7 @@ export default function Nav(props){
 
 
             <Routes>
-                <Route path={"/"}/>
+                <Route path={"/"} element={<Home/>}/>
                 <Route path={"/prompt"} element={<AddPrompt/>}/>
             </Routes>
 
