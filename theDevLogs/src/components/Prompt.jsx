@@ -11,7 +11,7 @@ export default function Prompt(props){
         if(props.clicked == undefined){
             return
         }
-        props.clicked(someState)
+        props.clicked({title:someState})
         console.log("I handled it!")
     }
 
