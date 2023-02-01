@@ -24,8 +24,22 @@ export default function Prompt(props){
         console.log(`${e.target.id} handled it!`)
         // console.log(today.getUTCDate(),today.getUTCDay(),today.getUTCFullYear())
         console.log("Here's some state " + someState)
-        logData.push({month: today.getUTCMonth()+1,year: today.getUTCFullYear(),id: logData.length,prompt_value: someState,day:today.getUTCDate(),prompt_title: props.text})
-        console.log(logData)
+        // logData.push({month: today.getUTCMonth()+1,year: today.getUTCFullYear(),id: logData.length,prompt_value: someState,day:today.getUTCDate(),prompt_title: props.text})
+        // console.log(logData)
+        fetch('http://localhost:8080/api/v1/saveUserPrompt', {
+            method: 'POST', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({months: today.getUTCMonth()+1,years: today.getUTCFullYear(),id: logData.length,promptValue: someState,days:today.getUTCDate(),title: props.text}),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log('Success:', data);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
     }
 
     let [someState, setState] = React.useState(null);
