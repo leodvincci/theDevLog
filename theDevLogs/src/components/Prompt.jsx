@@ -31,7 +31,7 @@ export default function Prompt(props){
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({months: today.getUTCMonth()+1,years: today.getUTCFullYear(),id: logData.length,promptValue: someState,days:today.getUTCDate(),title: props.text}),
+            body: JSON.stringify({months: today.getUTCMonth()+1,years: today.getUTCFullYear(),promptValue: someState,days:today.getUTCDate(),title: props.text}),
         })
             .then((response) => response.json())
             .then((data) => {
