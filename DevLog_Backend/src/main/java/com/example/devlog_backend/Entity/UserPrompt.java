@@ -1,13 +1,22 @@
 package com.example.devlog_backend.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
 public class UserPrompt {
 
+
     @Id
+    @SequenceGenerator(
+            name = "my_sequence_2",
+            sequenceName = "my_sequence_2",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "my_sequence_2"
+    )
     Long id;
     Integer days;
     Integer months;
