@@ -1,6 +1,6 @@
 import Prompt from "../components/Prompt.jsx";
 import {logData} from "../assets/devLogData.js";
-import React from "react";
+import React, {useEffect} from "react";
 export default function LogSheet(){
 
     function printDate(e){
@@ -11,13 +11,31 @@ export default function LogSheet(){
     }
 
     let [dateState, setDateState] = React.useState(21)
+    let [myData, setMyData] = React.useState([])
+
+    const getMyData = fetch('http://localhost:8080/api/v1/getUserPrompts')
+        .then((response) => response.json())
+        .then((data) => {return data})
+
+    let count = 0
+    useEffect( ()=>{
+        console.log(count)
+        console.log("YUp")
+        count = count + 1
+        getMyData.then(d=>setMyData(d))
+
+    },[])
+
 
     return (
         <>
+
+
+
             <input onChange={printDate} name={"the-date"} type="date"/>
             {console.log(printDate)}
-            {logData.filter(b=>b.day == dateState[2] && b.month == dateState[1] && b.year == dateState[0] ).map( d =>
-                <Prompt key = {d.id}text={d.prompt_title} val={d.prompt_value}/>
+            {myData.filter(b=>b.days == dateState[2] && b.months == dateState[1] && b.years == dateState[0] ).map( d =>
+                <Prompt key = {d.id}text={d.title} val={d.promptValue}/>
             )}
         </>
     )
