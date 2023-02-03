@@ -5,6 +5,8 @@ import com.example.devlog_backend.Repository.UserPromptRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserPromptService {
 
@@ -22,6 +24,11 @@ public class UserPromptService {
 
         userPromptRepo.save(newUserPrompt);
         System.out.println("UserPromptService: Saved User Prompt");
+    }
+
+    public List<UserPrompt> getUserPrompts(){
+        System.out.println("UserPromptService: Finding All User Prompts");
+        return userPromptRepo.findAll();
     }
 
 }
